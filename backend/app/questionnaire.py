@@ -35,6 +35,7 @@ QUESTIONS: List[dict] = [
     {
         "id": "day",
         "prompt": "What takes up most of your day?",
+        "help": "Pick the one that fits best.",
         "multi": False,
         "options": [
             {"id": "desk", "label": "A desk / office job",
@@ -74,6 +75,7 @@ QUESTIONS: List[dict] = [
     {
         "id": "audience",
         "prompt": "Who will you speak it with most?",
+        "help": "Pick the one that fits best.",
         "multi": False,
         "options": [
             {"id": "family", "label": "Family or in-laws",

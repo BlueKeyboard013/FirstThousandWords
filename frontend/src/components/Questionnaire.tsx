@@ -53,8 +53,13 @@ export default function Questionnaire({
       {questions.map((q) => (
         <fieldset key={q.id} className="question">
           <legend>{q.prompt}</legend>
-          {q.help && <p className="help">{q.help}</p>}
-          <div className="options">
+          <p className="help">
+            {q.help ?? (q.multi ? "Pick everything that applies." : "Pick one.")}
+            <span className="pick-mode">
+              {q.multi ? " · multiple choice" : " · choose one"}
+            </span>
+          </p>
+          <div className={`options ${q.multi ? "options-multi" : "options-single"}`}>
             {q.options.map((o) => {
               const selected = (answers[q.id] ?? []).includes(o.id);
               return (

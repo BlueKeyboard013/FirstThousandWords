@@ -142,6 +142,17 @@ h2 {
   font-weight: 600;
 }
 
+/* Single-choice questions use square chips so they read differently from
+   the pill-shaped multi-select ones. */
+.options-single .chip {
+  border-radius: 8px;
+}
+
+.pick-mode {
+  opacity: 0.6;
+  font-style: italic;
+}
+
 .actions {
   display: flex;
   align-items: center;
